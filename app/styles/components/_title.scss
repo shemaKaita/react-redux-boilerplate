@@ -1,0 +1,16 @@
+.title {
+    font-size: $title;
+    font-weight: 400;
+    &--big {
+        font-size: $title * 1.2;
+    }
+    &--small { 
+        font-size: $title * 0.6;
+    }
+    &--w-bold { 
+        font-weight: 900;
+    }
+    &--w-medium {
+        font-weight: 600;
+    }
+}

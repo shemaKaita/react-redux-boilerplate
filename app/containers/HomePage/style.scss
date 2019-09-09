@@ -1,32 +1,114 @@
-.home-page {
-  
-  h2 {
-    font-size: 1.5em;
+@import '../../styles/variables.scss';
+
+$header-height: 135px;
+
+#homePage {
+  height: 100%;
+  & > .uk-container {
+    padding: 0;
   }
-  
-  section {
-    margin: 3em auto;
+}
 
-    &:first-child {
-      margin-top: 0;
-    }
-
-    &.centered {
-      text-align: center;
-    }
+.home-banner {
+  position: relative;
+  height: auto;
+  display: flex;
+  align-content: center;
+  &:before {
+    content: '';
+    position: absolute;
+    background-image: url('./images/banner-bg--home.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: -$header-height;
+    width: 100%;
+    min-height: calc(55em - 135px);
+    padding-bottom: 70px;
+    box-sizing: content-box;
+    z-index: 0;
   }
-
-  form {
-    margin-bottom: 1em;
-
-    input {
-      outline: none;
-      border-bottom: 1px dotted #999;
-    }
+  &:after {
+    content: '';
+    position: absolute;
+    min-height: calc(55em - 135px);
+    padding-bottom: 70px;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #01072B, #000e65);
+    opacity: .8;
+    top: -$header-height;
+    z-index: 0;
+    box-sizing: content-box;
   }
+  .uk-container {
+    margin: auto;
+    position: relative;
+    top: -45px;
+  }
+}
 
-  span.at-prefix {
-    color: black;
-    margin-left: 0.4em;
+.home-banner__columns, .about-banner__columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  grid-column-gap: 2em;
+}
+
+.home-banner__title {
+  font-size: $title * 1.2;
+  letter-spacing: 3px;
+}
+
+.home-banner__body {
+  font-size: $body * 1.6;
+  margin: 2em 0;
+  letter-spacing: 2px;
+}
+
+.home-banner__column {
+  &--right {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .decor--img {
+    max-height: 500px;
+    min-height: 300px;
+    width: auto;
+  }
+}
+
+.about-banner {
+  & * {
+    color: #000;
+  }
+}
+
+.about-banner__title {
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.about-banner__body {
+  font-size: $body * 1.4;
+  letter-spacing: 1px;
+}
+
+.about-banner__skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+}
+
+.about-banner__skills-item {
+  &.badge {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    .title {
+      color: #fff;
+      font-size: $title * 1.2;
+      margin-bottom: 0;
+    }
   }
 }

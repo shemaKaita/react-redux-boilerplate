@@ -1,3 +1,8 @@
+* {
+  z-index: 1;
+  font-family: inherit;
+}
+
 html,
 body {
   height: 100%;
@@ -9,17 +14,41 @@ body {
 }
 
 body.fontLoaded {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: $default-font;
 }
 
 #app {
-  background-color: #fafafa;
-  min-height: 100%;
+  height: 100%;
   min-width: 100%;
 }
 
-p,
+a {
+  color: #fff;
+  &:hover, &:focus {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 label {
   font-family: Georgia, Times, 'Times New Roman', serif;
   line-height: 1.5em;
 }
+
+h1,h2,h3,p,li,a {
+  font-family: $default-font;
+  color: white;
+}
+
+// UI kit overrides
+
+.uk-grid {
+  margin-left: 0;
+}
+
+

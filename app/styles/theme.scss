@@ -1,1 +1,20 @@
+// Components path: ./components/
+
+
+// Custom variables
+@import './variables.scss';
+
+// Uikit styles
+@import "uikit/src/scss/variables-theme.scss";
+@import "uikit/src/scss/mixins-theme.scss";
+// Uikit main theme
+@import 'uikit/src/scss/uikit-theme.scss';
+
+@import './fonts.scss';
 @import './global-styles.scss';
+@import './components/container.scss';
+@import './components/wrapper.scss';
+@import './components/title.scss';
+@import './components/decor.scss';
+@import './components/button.scss';
+@import './components/badge.scss';

@@ -1,0 +1,24 @@
+// Fonts
+
+$default-font: 'Nunito', sans-serif;
+$title-font: 'Nunito Sans', sans-serif;
+
+// Colors
+
+$theme-color--green: #00C497;
+$theme-color--light-blue: #009393;
+$global-primary-background: $theme-color--green !default;
+
+// Padding sizes
+
+$default-padding: 10px;
+
+// Font sizes
+
+$title: 2.5em;
+$body: 1em;
+$label: .75em;
+
+$button-primary-background: $theme-color--green;
+$button-text-transform: inital;
+$button-primary-font-weight: 600;

@@ -1,0 +1,7 @@
+.uk-button {
+    letter-spacing: 2px;
+    border-radius: $border-rounded-border-radius;
+    &-primary {
+        font-weight: $button-primary-font-weight;
+    }
+}
